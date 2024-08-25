@@ -3,5 +3,8 @@
 .AppleDouble
 .LSOverride
 
+# java
+bin
+
 # editor
 .vscode
