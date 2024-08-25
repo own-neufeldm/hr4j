@@ -18,11 +18,11 @@ Create a portable JAR by using the tools from your JDK:
 
 ```bash
 # compile source code
-javac -d bin $(find src -name "*.java")
+javac -d bin src/main/java/*/*.java
 
 # create jar
 cd bin
-jar --create --file hr4j.jar --main-class hr4j.App $(find . -name "*.class")
+jar --create --file hr4j.jar --main-class hr4j.App */*.class
 ```
 
 You can now run the app using `java -jar hr4j.jar` in the new `bin` directory.
