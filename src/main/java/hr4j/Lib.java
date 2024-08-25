@@ -10,7 +10,7 @@ public class Lib {
             return String.format("%s %s %s", border, filler.repeat(fillerLength), reversedBorder);
         }
         int fillerLength = Math.max(length - 4 - title.length() - 2 * border.length(), 2);
-        int sideFillerLength = Math.ceilDiv(fillerLength, 2);
+        int sideFillerLength = (int) Math.ceil((double) fillerLength / 2);
         String sideFiller = filler.repeat(sideFillerLength);
         return String.format("%s %s %s %s %s", border, sideFiller, title, sideFiller,
                 reversedBorder);
