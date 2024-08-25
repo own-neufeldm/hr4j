@@ -17587,6 +17587,7 @@ public class CommandLine {
             final String name;
             int position;
 
+            @SuppressWarnings("deprecation")
             public MethodParam(Method method, int paramIndex) {
                 this.method = method;
                 this.paramIndex = paramIndex;
@@ -23687,6 +23688,7 @@ public class CommandLine {
             }
         }
         static class URLConverter implements ITypeConverter<URL> {
+            @SuppressWarnings("deprecation")
             public URL convert(String value) throws MalformedURLException {
                 return new URL(value);
             }
