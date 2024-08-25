@@ -4,11 +4,31 @@ Print horizontal rules. Java port of https://github.com/own-neufeldm/hr.
 
 ## Requirements
 
-tbc
+The following dependencies must already be installed on your system:
+
+| Dependency                                      | Version |
+| ----------------------------------------------- | ------- |
+| [OpenJDK](https://openjdk.org/projects/jdk/17/) | ^17     |
+
+Please refer to the official vendor documentation for setting up these requirements.
 
 ## Setup
 
-tbc
+Create a portable JAR by using the tools from your JDK:
+
+```bash
+# compile source code
+javac -d bin $(find src -name "*.java")
+
+# create jar
+cd bin
+jar --create --file hr4j.jar --main-class hr4j.App $(find . -name "*.class")
+```
+
+You can now run the app using `java -jar hr4j.jar` in the new `bin` directory.
+
+Additionally, you can create some kind of wrapper to simplify usage, e.g. by adding an alias to your
+user profile: `alias hr4j='java -jar <absolute/path/to/jar>'`.
 
 ## Usage
 
